@@ -162,7 +162,6 @@ class _VerticalViewPagerState extends State<VerticalViewPager> {
 
   /* calling api */
   Future<List<JokeList>> fetchJokes() async {
-   // final response = await http.get(Uri.parse('https://v2.jokeapi.dev/joke/Spooky?type=twopart&amount=10'));
     final response = await http.get(Uri.parse(ApiUrls.jokes_list_Url));
     if (response.statusCode == 200) {
       final jsonData = json.decode(response.body);
